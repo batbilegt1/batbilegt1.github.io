@@ -96,11 +96,14 @@ const LOG_MARKDOWN_OPTIONS: MarkdownToJSX.Options = {
  */
 const sectionVariants: Record<string, string> = {
   'Some history': LOG_VARIANT,
+  'Experience and community': 'about-section--compact',
+  Highlights: 'about-section--compact',
   'Travel / geography': LOG_VARIANT,
   'Fun facts': 'about-section--compact',
   'I like': 'about-section--compact',
   'I dream of': 'about-section--compact',
   'Websites from people I admire': 'about-section--links',
+  Websites: 'about-section--links',
 };
 
 interface AboutChunk {

@@ -2,11 +2,11 @@ import { render, screen } from '@testing-library/react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
-import { AGE_PRECISION_FULL, ageAt } from '@/lib/telemetry';
+import { AGE_PRECISION_FULL } from '@/lib/telemetry';
 
 import LiveAge from '../../Stats/LiveAge';
 
-const INITIAL = '36.42';
+const INITIAL = 'unavailable';
 const NOTE = 'as of 2026-07-31';
 
 const subject = () => (
@@ -22,7 +22,7 @@ function setReducedMotion(matches: boolean) {
 describe('LiveAge', () => {
   it('renders a real dated age with no JavaScript, reserving the final width', () => {
     const html = renderToStaticMarkup(subject());
-    const width = ageAt(Date.now(), AGE_PRECISION_FULL).length;
+    const width = Math.max(INITIAL.length, 3 + AGE_PRECISION_FULL);
 
     expect(html).toContain(`>${INITIAL}<`);
     expect(html).toContain(NOTE);
@@ -35,7 +35,7 @@ describe('LiveAge', () => {
 
     const { container } = render(subject());
 
-    expect(screen.getByText('Live')).toBeInTheDocument();
+    expect(screen.queryByText('Live')).toBeNull();
     // The value, its note, and the snapshot only print shows.
     expect(container.children).toHaveLength(3);
   });

@@ -8,6 +8,7 @@ import {
 
 import LiveAge from './LiveAge';
 import Table from './Table';
+import type { StatRow } from './TableRow';
 
 /**
  * The personal stats table stays server-rendered. Only its age value is a
@@ -15,28 +16,27 @@ import Table from './Table';
  */
 export default function PersonalStats() {
   const renderedAt = Date.now();
+  const data: StatRow[] = [];
 
-  return (
-    <Table
-      data={[
-        {
-          label: 'Current age',
-          value: (
-            <LiveAge
-              initial={ageAt(renderedAt, AGE_PRECISION_STATIC)}
-              note={`as of ${utcDate(renderedAt)}`}
-              precision={AGE_PRECISION_FULL}
-            />
-          ),
-        },
-        {
-          label: 'Countries visited',
-          value: String(profile.countriesVisited),
-          link: 'https://www.google.com/maps/d/embed?mid=1iBBTscqateQ93pWFVfHCUZXoDu8&z=2',
-          linkLabel: 'map',
-        },
-        { label: 'Current city', value: profile.currentCity },
-      ]}
-    />
-  );
+  if (profile.birthDate) {
+    data.push({
+      label: 'Current age',
+      value: (
+        <LiveAge
+          initial={ageAt(renderedAt, AGE_PRECISION_STATIC)}
+          note={`as of ${utcDate(renderedAt)}`}
+          precision={AGE_PRECISION_FULL}
+        />
+      ),
+    });
+  }
+  if (profile.countriesVisited) {
+    data.push({
+      label: 'Countries visited',
+      value: String(profile.countriesVisited),
+    });
+  }
+  data.push({ label: 'Current city', value: profile.currentCity });
+
+  return <Table data={data} />;
 }

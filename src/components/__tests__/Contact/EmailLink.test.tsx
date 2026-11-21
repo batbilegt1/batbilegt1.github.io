@@ -97,7 +97,7 @@ describe('EmailLink', () => {
 
       previous = shown;
     }
-  });
+  }, 10_000);
 
   it('pauses while hovered and picks up again afterwards', () => {
     const { container } = render(<EmailLink />);

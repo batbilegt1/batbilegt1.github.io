@@ -68,7 +68,7 @@ interface ResumeBasics {
 interface ResumeWork {
   name: string;
   position: string;
-  url: string;
+  url?: string;
   startDate: string;
   endDate?: string;
   /** An extension, as nested objects allow: a role beside the main career. */
@@ -241,7 +241,7 @@ function buildWork(): ResumeWork[] {
   return sortPositions(work).map((position) => ({
     name: position.name,
     position: position.position,
-    url: position.url,
+    ...(position.url ? { url: position.url } : {}),
     startDate: position.startDate,
     ...(position.endDate ? { endDate: position.endDate } : {}),
     ...(position.commitment ? { commitment: position.commitment } : {}),

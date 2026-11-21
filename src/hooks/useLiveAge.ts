@@ -2,6 +2,7 @@
 
 import { type RefObject, useEffect, useRef, useState } from 'react';
 
+import profile from '@/data/profile.json';
 import { ageAt, ageIntervalFor } from '@/lib/telemetry';
 
 import usePrefersReducedMotion from './usePrefersReducedMotion';
@@ -57,7 +58,7 @@ export default function useLiveAge<T extends HTMLElement = HTMLSpanElement>(
     const sync = () => {
       stop();
 
-      if (document.hidden || prefersReducedMotion) {
+      if (!profile.birthDate || document.hidden || prefersReducedMotion) {
         showSnapshot();
         return;
       }

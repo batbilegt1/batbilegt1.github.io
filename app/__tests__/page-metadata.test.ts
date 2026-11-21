@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { sharedOpenGraph } from '@/lib/metadata';
 import { getPostSlugs } from '@/lib/posts';
 import { HOME_CARD_PATH } from '@/lib/share-cards.mjs';
-import { AUTHOR_NAME, SITE_URL, TWITTER_HANDLE } from '@/lib/utils';
+import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 import { metadata as aboutMetadata } from '../about/page';
 import { metadata as contactMetadata } from '../contact/page';
 import { metadata as notFoundMetadata } from '../not-found';
@@ -21,8 +21,6 @@ import { metadata as writingMetadata } from '../writing/page';
 const sharedFields = { siteName: sharedOpenGraph?.siteName, locale: 'en_US' };
 const sharedTwitterFields = {
   card: 'summary_large_image',
-  site: TWITTER_HANDLE,
-  creator: TWITTER_HANDLE,
 };
 
 describe('page metadata', () => {

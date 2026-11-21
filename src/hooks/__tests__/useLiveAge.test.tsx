@@ -42,14 +42,14 @@ describe('useLiveAge', () => {
     vi.useRealTimers();
   });
 
-  it('upgrades to the requested precision and marks an active timer live', () => {
+  it('keeps the snapshot when no birth date is published', () => {
     render(<Subject />);
 
-    expect(age()).toHaveTextContent(/^\d+\.\d{8}$/);
-    expect(age()).toHaveAttribute('data-live', 'true');
+    expect(age()).toHaveTextContent('36.42');
+    expect(age()).toHaveAttribute('data-live', 'false');
   });
 
-  it('restores the snapshot while hidden and resynchronizes on return', () => {
+  it('does not start a timer while hidden or when restored', () => {
     render(<Subject />);
 
     setHidden(true);
@@ -57,13 +57,13 @@ describe('useLiveAge', () => {
     expect(age()).toHaveAttribute('data-live', 'false');
 
     setHidden(false);
-    expect(age().textContent).not.toBe(INITIAL);
-    expect(age()).toHaveAttribute('data-live', 'true');
+    expect(age()).toHaveTextContent(INITIAL);
+    expect(age()).toHaveAttribute('data-live', 'false');
   });
 
   // At full precision the timer reaches 40 ticks a second, so routing the value
   // through state would cost as many renders.
-  it('advances the text without a React render per tick', () => {
+  it('does not advance or rerender without a birth date', () => {
     render(<Subject />);
     const rendersAfterMount = renders;
     const firstReading = age().textContent;
@@ -72,7 +72,7 @@ describe('useLiveAge', () => {
       vi.advanceTimersByTime(5000);
     });
 
-    expect(age().textContent).not.toBe(firstReading);
+    expect(age().textContent).toBe(firstReading);
     expect(renders).toBe(rendersAfterMount);
   });
 });

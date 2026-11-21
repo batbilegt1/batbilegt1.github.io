@@ -10,26 +10,21 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-grid">
         <div className="hero-primary">
-          <p className="hero-kicker">Software &amp; security</p>
+          <p className="hero-kicker">Software engineering</p>
           <h1 className="hero-title">
             <span className="hero-name">{smartQuotes(profile.name)}</span>
           </h1>
           <p className="hero-tagline">
             I’m a {profile.role} at{' '}
-            <a href="https://openai.com" className="hero-highlight">
+            <a href="https://www.hanyang.ac.kr/" className="hero-highlight">
               {profile.employer}
             </a>
-            , working on{' '}
-            <a href="https://promptfoo.dev" className="hero-highlight">
-              Promptfoo
-            </a>{' '}
-            and other cyber products.
+            , studying in Seoul, South Korea.
           </p>
 
           <p className="hero-summary">
-            I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026.
+            Software engineer experienced in full-stack development, Ruby on
+            Rails, AWS, Linux, containers, and production cloud operations.
           </p>
 
           <div className="hero-cta">

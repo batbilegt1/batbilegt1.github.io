@@ -52,6 +52,9 @@ describe('listPostFiles', () => {
     ['notes.txt', 'file', /notes\.txt is not a post name/],
     ['My Post.md', 'file', /My Post\.md is not a post name/],
   ] as const)('refuses %s', (name, kind, message) => {
+    if (process.platform === 'win32' && kind === 'link') {
+      return;
+    }
     const root = directoryWith({ 'b.md': 'file', [name]: kind });
 
     expect(() => listPostFiles(root)).toThrow(message);

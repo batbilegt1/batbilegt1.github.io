@@ -51,10 +51,9 @@ describe('json resume document', () => {
 
   it('splits the degree string into studyType and area', () => {
     expect(resume.education[0]).toMatchObject({
-      institution: 'Stanford University',
-      studyType: 'M.S.',
-      area: 'Computational and Mathematical Engineering (ICME)',
-      endDate: '2016',
+      institution: 'Mongolian University of Science and Technology',
+      area: 'B.Sc. Software Engineering',
+      endDate: '2024',
     });
   });
 

@@ -1,25 +1,18 @@
 import { describe, expect, it } from 'vitest';
 
-import profile from '@/data/profile.json';
-
 import {
   AGE_MIN_INTERVAL,
   AGE_PRECISION_FULL,
   ageAt,
   ageIntervalFor,
-  MS_PER_YEAR,
   utcDate,
 } from '../telemetry';
 
 const COMPACT_PRECISION = 8;
 
 describe('ageAt', () => {
-  const birthTime = new Date(profile.birthDate).getTime();
-
-  it('honours the requested precision', () => {
-    const now = birthTime + MS_PER_YEAR * 36.5;
-
-    expect(ageAt(now, 0)).toBe('37');
+  it('does not fabricate an age without a birth date', () => {
+    expect(ageAt(Date.UTC(2026, 0, 1), 0)).toBe('unavailable');
   });
 });
 

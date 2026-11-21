@@ -3,8 +3,8 @@
     "accent": "#36559a",
     "onAccent": "#ffffff",
     "backgroundLight": "#f6f3ed",
-    "monogram": "MD",
-    "name": "Michael D'Angelo",
+    "monogram": "BD",
+    "name": "Batbilegt Davaa",
     "font": {
       "name": "Display",
       "family": "Inter",
@@ -31,14 +31,14 @@
       }
     ]
   },
-  "generatorDigest": "6eeba8407be767d11d19d9afb46ab8201bc1b1cc86d8f83702f62c3b4b77bd58",
+  "generatorDigest": "1fa934037c8af17886698cce3eca69f94040d5dd346dc9ce90112b50adee50b1",
   "files": {
-    "app/favicon.ico": "1a36375860b595f54b960ae03580627b62b72e20f44f0fb82066686e10ec41e1",
-    "app/icon.png": "43291a11cdaa0d3333e6ec55216c112f7a0e5cb3c34c1b05869e00fc98057b5e",
-    "app/apple-icon.png": "199c982a9393dbb7103edb219d0c77cb043e8196f04a1c61c91a94b0022f098b",
-    "public/images/icons/icon-192.png": "f36da26102fefc11421fcc5e5f7c446b275ceb02cfce8d80d172e3e956b5561c",
-    "public/images/icons/icon-512.png": "70de66a2f3cd873a32573d0a5fa47770b33e96521deba51d50fa8fc44d56b10b",
-    "public/images/icons/icon-maskable-512.png": "dcfffad9804202211a36cc6a70331263bdc8a7f494fd2e9f0dcc83d81a65f84f",
-    "app/manifest.json": "3a1c7ffdf7fc6e03045a78d74b80b67708488ff035fb42eee788a7a38f23fd07"
+    "app/favicon.ico": "55f581a6edf65df454342839e20127443b4cfb8bbd221c41be8fe3e17ac79176",
+    "app/icon.png": "67217cfa45e051cecf8b7dd3266157873a052bf9c591f0665b51eab141fc6dc1",
+    "app/apple-icon.png": "ccb0a1a8ef122ca6d25a59091a74c743152f7e832ee6d9c6a0d3c1bf7a46a38e",
+    "public/images/icons/icon-192.png": "b495d286a2cc0540e9f0de4c9542d727e5e40dbb42ef57603d33a3fea7ab3b75",
+    "public/images/icons/icon-512.png": "60510d5f0f89be8f701056c09b4ef6cad47fd5a644f334d6244c684705d2aa95",
+    "public/images/icons/icon-maskable-512.png": "a26f3494acf73bde4665b5c216c35d815a44fec2d579a51f77ff5a82f88d76cf",
+    "app/manifest.json": "215d1d1529dba0f38c5e9af672abf8e8b419eaf17344371d9b0c6a15c54156f9"
   }
 }

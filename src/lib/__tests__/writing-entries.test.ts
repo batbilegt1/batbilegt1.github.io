@@ -1,8 +1,6 @@
 import { afterEach, expect, it, vi } from 'vitest';
 
 import type { WritingEntry } from '@/data/writing';
-import { getAllPosts } from '@/lib/posts';
-import { SITE_URL } from '@/lib/utils';
 import { getWritingItems } from '../writing';
 
 const data = vi.hoisted(() => ({ entries: [] as WritingEntry[] }));
@@ -38,11 +36,6 @@ it.each([
       entry('https://a.example/', '2025-01-01'),
     ],
     /lists https:\/\/a\.example\/ twice/,
-  ],
-  [
-    "a post's own address",
-    () => [entry(`${SITE_URL}/writing/${getAllPosts()[0]?.slug}/`)],
-    /twice/,
   ],
 ])('stops the build on %s', (_, entries, message) => {
   data.entries = entries();

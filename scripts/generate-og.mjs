@@ -84,7 +84,14 @@ await requireSharp();
  * makes a later edit to a published post require regeneration.
  */
 const READOUT = [
-  { label: 'Countries visited', value: String(profile.countriesVisited) },
+  ...(profile.countriesVisited == null
+    ? []
+    : [
+        {
+          label: 'Countries visited',
+          value: String(profile.countriesVisited),
+        },
+      ]),
   { label: 'Computing since', value: String(profile.computingSince) },
   { label: 'Based in', value: profile.currentCity },
 ];

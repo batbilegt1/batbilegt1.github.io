@@ -10,7 +10,8 @@ vi.mock('node:fs', async (importOriginal) => {
   return {
     ...actual,
     readFileSync: ((path: string, ...rest: unknown[]) => {
-      const name = String(path).split('/public').pop() ?? '';
+      const absolute = String(path).replaceAll('\\', '/');
+      const name = absolute.split('/public').pop() ?? '';
       return (
         files.get(name) ?? (actual.readFileSync as Function)(path, ...rest)
       );

@@ -22,7 +22,7 @@ import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 
 const resumeMetadata = createPageMetadata({
   title: 'Resume',
-  description: `${AUTHOR_NAME}'s Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.`,
+  description: `${AUTHOR_NAME}'s resume. Software engineering, Ruby on Rails, AWS, Linux, and cloud infrastructure.`,
   path: '/resume/',
 });
 
@@ -95,12 +95,12 @@ export default function ResumePage() {
             </div>
           </div>
           <p className="resume-summary">
-            Engineering leader with a career spanning {careerSpan}+ years across
-            AI, security, and infrastructure. I’m currently a Member of the
-            Technical Staff at OpenAI, working on Promptfoo and other cyber
-            products. I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026. Stanford MS, YC alum, previously VP Engineering.
+            Software engineer with a career spanning {careerSpan}+ years across
+            full-stack development, Ruby on Rails, AWS, Linux, containers, and
+            cloud infrastructure. I develop and maintain production systems and
+            currently study at Hanyang University in Seoul. AWS Certified Cloud
+            Practitioner; 3rd place in the MUST Programming Olympiad; bronze
+            medal in the XIV Mongolian National Programming Olympiad team.
           </p>
           {/* Print-only, but real markup rather than CSS `content`, so it is
               selectable and linkable. Destinations come from shared contact

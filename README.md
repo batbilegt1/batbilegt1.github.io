@@ -1,9 +1,9 @@
-# Michael D'Angelo: Personal Site
+# Batbilegt Davaa: Personal Site
 
-[![CI status](https://github.com/mldangelo/personal-site/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/mldangelo/personal-site/actions/workflows/node.js.yml)
+[![CI status](https://github.com/batbilegt1/personal-site/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/batbilegt1/personal-site/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-The source for [mldangelo.com](https://mldangelo.com): a portfolio, résumé, and
+The source for [batbilegt1.github.io/personal-site](https://batbilegt1.github.io/personal-site/): a portfolio, résumé, and
 blog built with [Next.js](https://nextjs.org/), [React](https://react.dev/),
 [TypeScript](https://www.typescriptlang.org/), and
 [Tailwind CSS](https://tailwindcss.com/), published as static files on GitHub
@@ -13,10 +13,10 @@ You're welcome to fork it for your own site or borrow any part of it.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./docs/images/home-dark.webp">
-  <img alt="The mldangelo.com homepage: a name and short introduction beside a portrait, above a list of recent essays." src="./docs/images/home-light.webp">
+  <img alt="The Batbilegt Davaa homepage: a name and short introduction beside a portrait, above a list of recent work." src="./docs/images/home-light.webp">
 </picture>
 
-[Live site](https://mldangelo.com) · [Get started](#get-started) ·
+[Live site](https://batbilegt1.github.io/personal-site/) · [Get started](#get-started) ·
 [Customize](#customize) · [Deploy](#deploy)
 
 ## Features

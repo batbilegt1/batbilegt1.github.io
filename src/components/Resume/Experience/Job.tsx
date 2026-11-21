@@ -58,9 +58,13 @@ export default function Job({ data, tier = 'primary', now }: JobProps) {
       <div className="job-body">
         <header>
           <h3>
-            <a href={url} className="job-company">
-              {smartQuotes(name)}
-            </a>
+            {url ? (
+              <a href={url} className="job-company">
+                {smartQuotes(name)}
+              </a>
+            ) : (
+              <span className="job-company">{smartQuotes(name)}</span>
+            )}
             {/* Only layout separates the two, so a screen reader needs the comma. */}
             <span className="sr-only">, </span>
             {/* A side role overlaps the main one on the timeline, so it

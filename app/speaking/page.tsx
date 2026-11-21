@@ -37,10 +37,9 @@ export default function SpeakingPage() {
         <header className="projects-header">
           <h1 className="page-title">{PAGE_TITLE}</h1>
           <p className="page-subtitle page-prose">
-            I talk about security for AI systems: prompt injection, agent
-            security, and red teaming LLM applications. Most of it comes from
-            building Promptfoo and now working on cyber products at OpenAI.
-            Organizing an event? <Link href="/contact/">Get in touch</Link>.
+            Public speaking appearances will be listed here as they are
+            confirmed. Organizing an event?{' '}
+            <Link href="/contact/">Get in touch</Link>.
           </p>
         </header>
 
@@ -57,20 +56,6 @@ export default function SpeakingPage() {
               </li>
             ))}
           </ol>
-        </section>
-
-        <section className="projects-group" aria-labelledby="speaking-private">
-          <div className="section-header">
-            <h2 id="speaking-private" className="section-heading">
-              Closed-door sessions
-            </h2>
-          </div>
-          <p className="page-prose">
-            I also run closed-door sessions with security and engineering teams
-            on behalf of OpenAI, which aren’t listed here. If you’re organizing
-            an event or working on the same problems,{' '}
-            <Link href="/contact/">get in touch</Link>.
-          </p>
         </section>
       </div>
     </PageWrapper>
