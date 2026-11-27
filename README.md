@@ -1,3 +1,14 @@
+# For run this project in local 8081 port
+
+- sudo docker build -t personal-site:1.0 .
+- sudo docker images
+- sudo docker run -d \
+  --name my-website \
+  -p 8081:80 \
+  personal-site:1.0
+
+- http://localhost:8081/
+
 # Batbilegt Davaa: Personal Site
 
 [![CI status](https://github.com/batbilegt1/personal-site/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/batbilegt1/personal-site/actions/workflows/node.js.yml)
